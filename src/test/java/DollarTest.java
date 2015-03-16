@@ -2,7 +2,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class TestCaseOne {
+public class DollarTest {
     @Test
     public void testMultiplication() {
         Dollar five = new Dollar(5);
