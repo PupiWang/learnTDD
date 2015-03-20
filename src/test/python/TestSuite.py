@@ -1,5 +1,3 @@
-from TestResult import TestResult
-
 class TestSuite:
 
     def __init__(self):
