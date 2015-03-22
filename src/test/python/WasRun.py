@@ -1,22 +1,22 @@
 from TestCase import TestCase
 
-class WasRun(TestCase):
 
+class WasRun(TestCase):
     def __init__(self, name):
         self.wasRun = None
         TestCase.__init__(self, name)
 
-    def setUp(self):
+    def set_up(self):
         self.wasRun = None
         self.wasSetUp = 1
-        self.log = "setUp "
+        self.log = "set_up "
 
-    def testMethod(self):
+    def test_method(self):
         self.wasRun = 1
-        self.log = self.log + "testMethod "
+        self.log = self.log + "test_method "
 
-    def tearDown(self):
-        self.log = self.log + "tearDown "
+    def tear_down(self):
+        self.log = self.log + "tear_down "
 
-    def testBrokeMethod(self):
+    def test_broke_method(self):
         raise Exception

@@ -1,20 +1,19 @@
 class TestCase:
-
     def __init__(self, name):
         self.name = name
 
-    def setUp(self):
+    def set_up(self):
         pass
 
     def run(self, result):
-        result.testStarted()
-        self.setUp()
+        result.test_started()
+        self.set_up()
         try:
             method = getattr(self, self.name)
             method()
         except:
-            result.testFailed()
-        self.tearDown()
+            result.test_failed()
+        self.tear_down()
 
-    def tearDown(self):
+    def tear_down(self):
         pass
